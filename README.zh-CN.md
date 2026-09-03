@@ -66,3 +66,13 @@ python scripts/public_release_check.py . --denylist /path/to/private-denylist.tx
 ```
 
 自动扫描通过不代表已经完成公司所有权、合规、品牌或第三方素材授权审查。
+
+## 同事交接包
+
+`team-kit/` 提供可直接交给另一位同事 Codex 的机器可读入口、安全安装器、请求模板和自校验工具。同事上传 ZIP 后，只需把 `CODEX_INSTALL_AND_RUN.txt` 原样发给 Codex。
+
+生成交接包：
+
+```bash
+python team-kit/build_team_package.py --out ../Image2投行PPT_Codex使用包.zip
+```

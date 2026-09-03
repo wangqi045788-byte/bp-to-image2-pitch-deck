@@ -6,6 +6,14 @@ An installable Codex skill that turns a user prompt, company information, and mi
 
 Inputs can be sparse. A BP and visual references are optional. The workflow selects only the pages supported by the objective and evidence, derives a company-specific brand system, creates a high-complexity production prompt for every slide, generates full-slide visuals, assembles the PPTX, and validates the exported deck.
 
+## Teammate handoff kit
+
+The `team-kit/` directory contains a machine-readable Codex entry prompt, a safe cross-platform installer, an input template, and package verification tooling. Build a self-contained ZIP with:
+
+```bash
+python team-kit/build_team_package.py --out ../Image2投行PPT_Codex使用包.zip
+```
+
 ## This is the creation workflow
 
 This repository creates a **new** deck from source material. It is deliberately separate from [`editable-ppt-image2-rebuild`](https://github.com/wangqi045788-byte/editable-ppt-image2-rebuild), which reconstructs an existing slide or screenshot as editable PowerPoint objects.

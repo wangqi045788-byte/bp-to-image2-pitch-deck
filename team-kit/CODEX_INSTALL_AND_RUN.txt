@@ -1,0 +1,14 @@
+你收到的是“Image2 投行 PPT Codex 使用包”。请直接完成任务，不要只解释操作方法。
+
+1. 解压附件，先读 START_HERE.md，再完整读取 skill/bp-to-image2-pitch-deck/SKILL.md。
+2. 若当前环境允许持久安装，运行 python install_skill.py；若目标已存在且版本不同，运行 python install_skill.py --update。若无法持久安装，不要停，直接以包内 SKILL.md 为本次任务的 Skill 执行。
+3. 不要调用或混用 editable-ppt-image2-rebuild：本任务是从资料重新策划并用 Image2 画 PPT，不是把截图重建为可编辑对象。
+4. 读取我同时上传的 Prompt、公司信息、参考资料，以及可选 BP、Logo、品牌资料和参考视觉。资料不齐时按证据强度减少页面并列出缺口，不得编造。
+5. 只先加载 SKILL.md；再严格按其中 Required routing 在对应阶段读取必要 reference，避免一次加载全部文件。
+6. 先做来源盘点、证据卡、叙事选择、页面计划和品牌系统；用包内脚本校验 deck-brief.json 并生成逐页 prompt pack；再用最高质量可用的 Image2 生成完整 16:9 页面并组装 PPTX。
+7. 真实 Logo、产品图、界面、报告截图和其他事实性资产不得由 Image2 重绘。所有数字、日期、客户、排名、市场份额和引用必须可追溯。
+8. 导出后必须渲染 PPTX 并逐页 QA；返回 PPTX、页数、叙事摘要、证据/假设台账位置和 QA 结果。明确说明输出为全页视觉，不是对象级可编辑重建。
+9. 默认质量设置：gpt-5.6-sol + high；资料复杂、来源冲突或关键对外材料用 xhigh；安装、盘点、确定性脚本与简单改单页可降到 medium；不要默认使用 ultra。
+
+我的具体项目要求如下：
+[在这里粘贴用户 Prompt，或写“见同时上传的 REQUEST_TEMPLATE.md / 项目说明文件”]
