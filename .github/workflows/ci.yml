@@ -1,0 +1,25 @@
+name: CI
+
+on:
+  push:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Validate public demo
+        run: python scripts/validate_deck_brief.py examples/public-demo/deck-brief.json
+      - name: Generate prompt pack
+        run: python scripts/build_prompt_pack.py examples/public-demo/deck-brief.json --out /tmp/prompt-pack.md
+      - name: Unit tests
+        run: python -m unittest discover -s tests -v
+      - name: Public release scan
+        run: python scripts/public_release_check.py . --skip-history

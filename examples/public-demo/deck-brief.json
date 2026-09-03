@@ -1,0 +1,162 @@
+{
+  "schema_version": "1.0",
+  "job": {
+    "title": "HelioGrid synthetic product pitch",
+    "mode": "public",
+    "objective": "Explain how a unified operating view can shorten the decision path",
+    "audience": "operations leadership",
+    "language": "en-US",
+    "aspect_ratio": "16:9",
+    "requested_slide_count": 3
+  },
+  "inputs": {
+    "user_prompt": "Create a concise three-slide product pitch from the synthetic company note. Emphasize operating clarity, not unsupported financial outcomes.",
+    "company": {
+      "name": "HelioGrid",
+      "one_liner": "A synthetic operating-intelligence concept for distributed energy teams",
+      "industry": "energy software"
+    },
+    "sources": [
+      {
+        "id": "S01",
+        "kind": "company_info",
+        "label": "synthetic",
+        "title": "HelioGrid synthetic source notes",
+        "locator": "examples/public-demo/source-notes.md"
+      }
+    ]
+  },
+  "brand": {
+    "basis": ["S01"],
+    "primary_colors": ["#17324D", "#245B52"],
+    "accent_colors": ["#E2B34B"],
+    "background_colors": ["#F5F2EA", "#E9EEE9"],
+    "text_colors": ["#15232D", "#FFFFFF"],
+    "typography": "normal-width modern sans-serif with tabular numerals and two weights",
+    "shape_language": "precise grid, thin structural lines, restrained radii, no floating card wall",
+    "image_direction": "editorial infrastructure realism with subtle topographic and energy-flow cues",
+    "logo_policy": "no logo supplied; render the company name as exact text without inventing a mark",
+    "forbidden_motifs": ["generic blue-purple neon", "robot imagery", "decorative energy lightning"]
+  },
+  "evidence_cards": [
+    {
+      "id": "E01",
+      "claim": "The current synthetic workflow contains four handoffs",
+      "evidence_type": "user_assertion",
+      "source_id": "S01",
+      "locator": "bullet 1",
+      "confidence": "medium",
+      "public_safe": true
+    },
+    {
+      "id": "E02",
+      "claim": "The proposed synthetic workflow contains two handoffs: unified intake and prioritized action",
+      "evidence_type": "user_assertion",
+      "source_id": "S01",
+      "locator": "bullet 2",
+      "confidence": "medium",
+      "public_safe": true
+    },
+    {
+      "id": "E03",
+      "claim": "The intended audience is an operations leadership team",
+      "evidence_type": "user_assertion",
+      "source_id": "S01",
+      "locator": "bullet 3",
+      "confidence": "medium",
+      "public_safe": true
+    }
+  ],
+  "narrative": {
+    "thesis": "HelioGrid reframes fragmented operational signals into one shorter decision path",
+    "storyline": [
+      "Fragmented handoffs obscure priority",
+      "A unified intake creates one operating picture",
+      "A shorter path clarifies the next action"
+    ],
+    "assumptions": ["The workflow description is a synthetic concept, not a measured deployment"],
+    "omissions": ["No financial, market, customer, or performance claims supplied"],
+    "open_questions": []
+  },
+  "slides": [
+    {
+      "number": 1,
+      "title": "One operating view. A shorter decision path.",
+      "archetype": "cover",
+      "purpose": "Establish the product thesis and visual identity",
+      "key_message": "HelioGrid turns fragmented operating signals into a coherent action path",
+      "content": [
+        {"type": "headline", "text": "One operating view. A shorter decision path.", "evidence_ids": []},
+        {"type": "subtitle", "text": "HelioGrid | Synthetic product concept", "evidence_ids": []}
+      ],
+      "visual": {
+        "layout": "asymmetric editorial cover with a wide left title field and a single infrastructure-flow hero on the right",
+        "reading_path": "title to hero flow to quiet subtitle",
+        "dominant_object": "one integrated energy-network flow moving toward a single control point",
+        "zones": 2,
+        "mechanism": "strategic hero visual",
+        "reference_asset_ids": []
+      },
+      "copyfit": {"title_max_chars": 48, "body_max_chars": 96, "metric_max": 0},
+      "source_note_evidence_ids": [],
+      "image2": {
+        "direction": "Premium institutional cover with tactile infrastructure detail and large calm negative space.",
+        "negative_constraints": ["no invented logo", "no dashboard screenshot"]
+      }
+    },
+    {
+      "number": 2,
+      "title": "Four handoffs fragment the operating picture",
+      "archetype": "problem",
+      "purpose": "Show why the current process creates decision friction",
+      "key_message": "Multiple handoffs separate signals from the people who must act",
+      "content": [
+        {"type": "headline", "text": "Four handoffs fragment the operating picture", "evidence_ids": ["E01"]},
+        {"type": "metric", "text": "4 handoffs", "evidence_ids": ["E01"]},
+        {"type": "body", "text": "Signals move across separate steps before a priority becomes visible.", "evidence_ids": ["E01"]}
+      ],
+      "visual": {
+        "layout": "left-to-right broken process occupying the lower two-thirds, with the headline and metric anchored above",
+        "reading_path": "headline to metric to interrupted process",
+        "dominant_object": "a four-stage interrupted operating flow",
+        "zones": 2,
+        "mechanism": "process friction diagram",
+        "reference_asset_ids": []
+      },
+      "copyfit": {"title_max_chars": 48, "body_max_chars": 130, "metric_max": 1},
+      "source_note_evidence_ids": ["E01"],
+      "image2": {
+        "direction": "Use restrained discontinuities and routing friction, not warning-sign clichés.",
+        "negative_constraints": ["no red alarm icons", "no generic four-card row"]
+      }
+    },
+    {
+      "number": 3,
+      "title": "Two steps connect signal to action",
+      "archetype": "workflow",
+      "purpose": "Explain the proposed operating mechanism",
+      "key_message": "Unified intake and prioritized action form one clear decision loop",
+      "content": [
+        {"type": "headline", "text": "Two steps connect signal to action", "evidence_ids": ["E02"]},
+        {"type": "metric", "text": "2 handoffs", "evidence_ids": ["E02"]},
+        {"type": "label", "text": "Unified intake", "evidence_ids": ["E02"]},
+        {"type": "label", "text": "Prioritized action", "evidence_ids": ["E02"]},
+        {"type": "body", "text": "One operating picture makes the next action easier to see.", "evidence_ids": ["E02"]}
+      ],
+      "visual": {
+        "layout": "one continuous horizontal path with a broad evidence intake on the left and a decisive action focus on the right",
+        "reading_path": "headline to two-step path to conclusion",
+        "dominant_object": "a continuous two-stage decision path",
+        "zones": 3,
+        "mechanism": "operating loop diagram",
+        "reference_asset_ids": []
+      },
+      "copyfit": {"title_max_chars": 40, "body_max_chars": 145, "metric_max": 1},
+      "source_note_evidence_ids": ["E02", "E03"],
+      "image2": {
+        "direction": "Resolve the flow visually from distributed inputs into one confident action plane.",
+        "negative_constraints": ["no circular-arrow cliché", "no generic SaaS dashboard"]
+      }
+    }
+  ]
+}

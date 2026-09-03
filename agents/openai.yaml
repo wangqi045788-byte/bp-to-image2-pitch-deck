@@ -1,0 +1,7 @@
+interface:
+  display_name: "BP to Image2 Pitch Deck"
+  short_description: "Turn source material into Image2 pitch decks"
+  brand_color: "#163A5F"
+  default_prompt: "Use $bp-to-image2-pitch-deck to turn my prompt, company information, and reference materials into a source-controlled Image2 pitch deck."
+policy:
+  allow_implicit_invocation: true
