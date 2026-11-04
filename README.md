@@ -1,5 +1,17 @@
 # BP to Image2 Pitch Deck
 
+**New: [Noir PPT Studio](NOIR_STUDIO.md)** — a photographic editorial Skill with native editable text/shapes, per-slide SVG, a bundled converter, and one-command installation/generation. [中文一键使用说明](NOIR_STUDIO.md).
+
+```bash
+python -m pip install -r requirements-noir.txt
+python tools/noir.py install
+python tools/noir.py generate --brief my-brief.md --job ../my-deck
+```
+
+Windows: double-click `install-noir.cmd` once, then drag a brief onto `start-noir.cmd`. The installed Codex runtime performs research and creative work with the tools actually available to the account. The deterministic exporter itself does not generate images. Public assets are methods and synthetic examples, not private company decks or campaign photographs.
+
+The original visual-first workflow below is retained. The new Noir route adds native editable PPTX + SVG and respects a different user-selected reference.
+
 [中文说明](README.zh-CN.md)
 
 An installable Codex skill that turns a user prompt, company information, and mixed reference material into an evidence-controlled, high-end pitch deck designed with Image2.

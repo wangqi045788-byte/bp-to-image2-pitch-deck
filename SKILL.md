@@ -5,6 +5,8 @@ description: Plan and create high-end, evidence-controlled pitch decks from a us
 
 # BP to Image2 Pitch Deck
 
+For an explicitly requested photographic editorial/noir deck with native editable PPTX and SVG, use [Noir PPT Studio](skills/noir-ppt-studio/SKILL.md). That route owns the native output contract; the original image-based workflow below remains available for visual-only decks.
+
 Turn sparse or messy source material into a coherent, investment-bank-quality pitch deck. Select the pages the evidence and user objective justify, generate a high-complexity Image2 prompt for every slide, create the slide visuals, assemble the deck, and verify the exported PPTX.
 
 This is a **deck creation** workflow. If the request is to reproduce a screenshot, PDF page, or existing slide as editable PowerPoint objects, use `editable-ppt-image2-rebuild` instead.

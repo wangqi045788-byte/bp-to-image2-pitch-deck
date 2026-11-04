@@ -1,0 +1,1 @@
+-r skills/noir-ppt-studio/requirements.txt

@@ -1,0 +1,13 @@
+{
+  "family": "Bodoni Moda Editorial",
+  "license": "SIL Open Font License 1.1",
+  "copyright": "Copyright 2020 The Bodoni Moda Project Authors",
+  "upstream": "https://github.com/google/fonts/tree/main/ofl/bodonimoda",
+  "original_file": "BodoniModa[opsz,wght].ttf",
+  "instance_axes": {
+    "wght": 400,
+    "opsz": 24
+  },
+  "modification": "Static instance renamed Bodoni Moda Editorial; supplied as an optional reference font, not an automatic global default.",
+  "sha256": "1ff6ca16c3b88d7434c77817c4099f55e5d554c38818676b58ee92cdec318d4e"
+}

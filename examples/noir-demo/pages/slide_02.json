@@ -1,0 +1,15 @@
+{
+  "number": 2,
+  "canvas": [1600, 900],
+  "background": {"fill": "#F4F3F0"},
+  "elements": [
+    {"type":"text","id":"eyebrow","text":"02 / COMPOSITION","x":112,"y":130,"font":"Century Gothic","size":17,"fill":"#777777","spacing":4,"anchor":"start"},
+    {"type":"text","id":"title","text":"Leave room for the image.","x":112,"y":255,"font":"Bodoni Moda Editorial","size":56,"fill":"#171717","anchor":"start"},
+    {"type":"rect","id":"photo-window","x":112,"y":320,"w":880,"h":460,"fill":"#D4D2CD","stroke":"none","width":0},
+    {"type":"line","id":"divider","x1":1040,"y1":320,"x2":1040,"y2":780,"stroke":"#858585","width":1},
+    {"type":"text","id":"note-title","text":"ONE FOCAL POINT","x":1100,"y":397,"font":"Century Gothic","size":18,"bold":true,"fill":"#222222","spacing":2,"anchor":"start"},
+    {"type":"text","id":"note-body-1","text":"Keep the page legible.","x":1100,"y":450,"font":"Century Gothic","size":20,"fill":"#575757","anchor":"start"},
+    {"type":"text","id":"note-body-2","text":"Let the photograph carry atmosphere.","x":1100,"y":483,"font":"Century Gothic","size":20,"fill":"#575757","anchor":"start"},
+    {"type":"text","id":"folio","text":"02 / 02","x":1470,"y":837,"font":"Century Gothic","size":13,"fill":"#888888","spacing":2,"anchor":"end"}
+  ]
+}

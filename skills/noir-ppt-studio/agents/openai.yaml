@@ -1,0 +1,4 @@
+interface:
+  display_name: "Noir PPT Studio"
+  short_description: "Create photographic editorial slides with editable native PPTX"
+  default_prompt: "Use $noir-ppt-studio to create a photographic editorial presentation with editable text, SVG sources, and checked output."

@@ -1,5 +1,7 @@
 # BP 到 Image2 高级路演 PPT
 
+**新增：[Noir PPT Studio 一键可编辑 PPT Skills](NOIR_STUDIO.md)**。黑白摄影、艺术编辑式排版、原生文字与图形、逐页 SVG、图片去重和成品检查；安装与启动脚本均已包含。原来的 Image2 整页视觉工作流继续保留。
+
 这是一个独立的 Codex“画 PPT”Skill：用户只需要提供 Prompt、公司信息和参考资料，即可让 Skill 自动整理证据、判断应该生成哪些页面、提炼品牌视觉语言、生成逐页高复杂度 Prompt，再交给 Image2 生成整套高级 Pitch Deck。
 
 BP 和参考视觉都是可选项。资料不完整时，Skill 会减少页数、记录假设和缺口，不会为了凑模板自行补数字或编造内容。

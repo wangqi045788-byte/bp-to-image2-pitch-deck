@@ -4,6 +4,7 @@
 from __future__ import annotations
 
 import argparse
+import hashlib
 import json
 import re
 import subprocess
@@ -19,7 +20,12 @@ BLOCKED_NAMES = {".env", "id_rsa", "id_ed25519", "credentials.json", "secrets.js
 BLOCKED_SEGMENTS = {"input", "private", "raw-inputs", "customer-assets", "generated_images", "generated-images"}
 TEXT_SUFFIXES = {
     ".md", ".txt", ".py", ".js", ".mjs", ".ts", ".json", ".yaml", ".yml", ".toml",
-    ".ini", ".cfg", ".csv", ".html", ".css", ".sh", ".ps1", ".gitignore", "",
+    ".ini", ".cfg", ".csv", ".html", ".css", ".sh", ".ps1", ".cmd", ".gitignore", "",
+}
+# One reviewed OFL font, not a blanket exemption for binaries or fonts.
+REVIEWED_BINARY_SHA256 = {
+    "skills/noir-ppt-studio/assets/fonts/BodoniModaEditorial-Regular.ttf":
+        "1ff6ca16c3b88d7434c77817c4099f55e5d554c38818676b58ee92cdec318d4e",
 }
 PATTERNS = {
     "private Windows path": re.compile(r"[A-Za-z]:\\Users\\[^\\\s]+", re.IGNORECASE),
@@ -65,7 +71,12 @@ def scan_tree(root: Path, denylist: list[str]) -> list[dict[str, str]]:
         if path.suffix.lower() in BLOCKED_SUFFIXES:
             findings.append({"path": str(relative), "kind": "blocked binary/archive", "match": path.suffix.lower()})
             continue
-        if path.suffix.lower() not in TEXT_SUFFIXES and path.name not in {"LICENSE", "Makefile"}:
+        approved_digest = REVIEWED_BINARY_SHA256.get(relative.as_posix())
+        if approved_digest:
+            if hashlib.sha256(path.read_bytes()).hexdigest() != approved_digest:
+                findings.append({"path": str(relative), "kind": "reviewed binary changed", "match": "SHA-256 mismatch"})
+            continue
+        if path.suffix.lower() not in TEXT_SUFFIXES and path.name not in {"LICENSE", "Makefile", "LICENSE.ppt-master", "LICENSE.figedit"}:
             findings.append({"path": str(relative), "kind": "unreviewed file type", "match": path.suffix or path.name})
             continue
         try:

@@ -1,0 +1,14 @@
+{
+  "number": 1,
+  "canvas": [1600, 900],
+  "background": {"fill": "#151515"},
+  "elements": [
+    {"type":"text","id":"eyebrow","text":"NOIR / EDITORIAL STUDY","x":112,"y":145,"font":"Century Gothic","size":18,"fill":"#E6E6E6","spacing":5,"anchor":"start"},
+    {"type":"text","id":"title","text":"A QUIETER KIND OF LIGHT","x":112,"y":350,"font":"Bodoni Moda Editorial","size":66,"fill":"#F5F3EF","spacing":1,"anchor":"start"},
+    {"type":"text","id":"subhead","text":"A two-page demonstration of native PowerPoint objects.","x":116,"y":402,"font":"Century Gothic","size":22,"fill":"#C8C8C8","anchor":"start"},
+    {"type":"line","id":"rule","x1":115,"y1":465,"x2":690,"y2":465,"stroke":"#888888","width":1},
+    {"type":"rect","id":"panel","x":1050,"y":145,"w":410,"h":550,"fill":"#202020","stroke":"#858585","width":1},
+    {"type":"polygon","id":"abstract-form","points":[[1115,605],[1230,260],[1395,578],[1298,635]],"fill":"#D4D1CA","stroke":"none","width":0},
+    {"type":"text","id":"caption","text":"01 / FORM","x":1055,"y":730,"font":"Century Gothic","size":16,"fill":"#A9A9A9","spacing":3,"anchor":"start"}
+  ]
+}

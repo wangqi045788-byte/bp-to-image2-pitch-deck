@@ -1,0 +1,7 @@
+{
+  "canvas": [1600, 900],
+  "slide_size": [1600, 900],
+  "language": "en-US",
+  "pages": ["pages/slide_01.json", "pages/slide_02.json"],
+  "output": "output/noir-demo.pptx"
+}
