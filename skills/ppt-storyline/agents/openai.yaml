@@ -1,0 +1,4 @@
+interface:
+  display_name: "PPT Storyline"
+  short_description: "Build concise presentation narratives and page plans"
+  default_prompt: "Use $ppt-storyline to turn my supported analysis into a conclusion-first, evidence-linked slide map for the requested audience."

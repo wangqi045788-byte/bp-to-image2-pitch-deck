@@ -1,0 +1,4 @@
+interface:
+  display_name: "PPT Analysis"
+  short_description: "Select and validate evidence-backed analysis for presentations"
+  default_prompt: "Use $ppt-analysis to select an evidence-backed analytical lens and prepare conclusions, calculations, alternatives and uncertainty for my presentation."

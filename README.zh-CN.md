@@ -1,80 +1,84 @@
-# BP 到 Image2 高级路演 PPT
+# PPT Studio · 全类型分析与制作 Skills
 
-**新增：[Noir PPT Studio 一键可编辑 PPT Skills](NOIR_STUDIO.md)**。黑白摄影、艺术编辑式排版、原生文字与图形、逐页 SVG、图片去重和成品检查；安装与启动脚本均已包含。原来的 Image2 整页视觉工作流继续保留。
+这套工具保存的是完整的 **分析方法、叙事方法、设计方法和 PPT 制作能力**。根据任务选择合适的分析框架、内容结构、图表与视觉风格，覆盖公司、行业、财务、投资、战略、经营、产品、学术、教学、提案和项目汇报等常见场景。可以继续扩展新的分析领域，不限定某种风格、页数或固定模板。
 
-这是一个独立的 Codex“画 PPT”Skill：用户只需要提供 Prompt、公司信息和参考资料，即可让 Skill 自动整理证据、判断应该生成哪些页面、提炼品牌视觉语言、生成逐页高复杂度 Prompt，再交给 Image2 生成整套高级 Pitch Deck。
+## 保留的分析逻辑
 
-BP 和参考视觉都是可选项。资料不完整时，Skill 会减少页数、记录假设和缺口，不会为了凑模板自行补数字或编造内容。
+**目标与问题 → 资料核验 → 证据分类与口径统一 → 选择合适框架 → 计算与比较 → 结论、反证和风险 → 叙事与页面结构 → 视觉设计 → 原生制作 → 成品检查。**
 
-## 与“转 PPT”项目的区别
+例如，分析公司不会只堆公司介绍；会根据听众的问题判断是否需要商业模式、价值链、竞争、财务驱动和战略选项。分析经营数据会区分结果与原因、实际与目标、相关与因果。学术汇报会保留研究问题、方法、结果、矛盾证据和局限。没有证据的 TAM、增长率或“显著提升”不会为了凑页编出来。
 
-- 本项目 `bp-to-image2-pitch-deck`：从 Prompt 和资料出发，重新选择内容、组织叙事并设计新 PPT。
-- [`editable-ppt-image2-rebuild`](https://github.com/wangqi045788-byte/editable-ppt-image2-rebuild)：把已有截图、PDF 页面或不可编辑 PPT 重建成可编辑对象。
+重要的来源、计算、假设、备选方案和简短判断依据会保存在可核查的分析记录中，再转成结论先行、证据对应的页面。不会把“用了 SWOT/PESTEL”当成完成分析。
 
-两者是两个自动化工作流，不混在同一个 Skill 中。
+## 八个可单独调用的 Skills
 
-## 支持的输入
+| Skill | 作用 |
+| --- | --- |
+| `$ppt-studio` | 总入口，统筹完整任务 |
+| `$ppt-research` | 搜索与核验资料、事实、日期和来源 |
+| `$ppt-analysis` | 问题拆解、选择分析方法、计算比较、判断与风险 |
+| `$ppt-storyline` | 整理汇报叙事、每页核心结论和演讲备注 |
+| `$ppt-design` | 按公司和场景确定排版、字体、图表、摄影和风格 |
+| `$ppt-production` | 制作原生可编辑文字、表格、图表、图形、照片和备注 |
+| `$ppt-quality` | 内容、数字、可编辑性、渲染和最终交付检查 |
+| `$noir-ppt-studio` | 可选的黑白摄影艺术风格与 SVG 拆分路径 |
 
-- 用户 Prompt：目的、受众、重点、语言、页数或使用场景；
-- 公司信息与各种参考资料；
-- BP、旧版材料或初步大纲（可选）；
-- Logo、品牌手册、产品图、界面截图、报告截图和参考视觉（可选）。
+Noir 只是其中一个选项。财务材料、咨询分析、科技产品、学术教学、公共政策和艺术品牌汇报会采用适合各自内容的表达方式。用户提供的正式模板优先。
 
-## 核心流程
+## 一次安装，以后一键启动
 
-`Prompt与资料 → 来源盘点 → 证据卡 → 飞书式工作文档 → 叙事与页面选择 → Logo/官网/资料品牌识别 → 配色与版式系统 → 逐页高复杂度Prompt → Image2高级视觉生成 → PPT封装 → 实机渲染与QA`
-
-关键原则：
-
-- 不套固定页数，先判断用户真正需要哪些页面；
-- 真实数字、日期、客户、排名、产品能力和引用必须有证据；
-- 公司披露、计算结果、用户陈述和分析判断必须分开；
-- 真实 Logo、产品图、界面和报告截图不得重绘或篡改；
-- 拒绝与公司无关的通用科技蓝、蓝紫霓虹、玻璃拟态和卡片墙；
-- 一页只讲一个决策信息，普通内容页最多三个主视觉区；
-- 先压缩文案并锁定版式，再生成视觉，不能靠小字体救场；
-- 最终每页是一张完整 Image2 视觉，不冒充“对象级可编辑重建”；
-- 客户资料、内部 Prompt、生成图和工作目录不得进入公开仓库。
-
-## 使用方式
-
-将仓库安装到 Codex Skills 目录后调用：
-
-```text
-$bp-to-image2-pitch-deck
-```
-
-示例：
-
-```text
-使用 $bp-to-image2-pitch-deck，根据我提供的 Prompt、公司资料和参考文件，
-自动选择最有说服力的页面，生成一套高质量投资人路演 PPT。BP 和参考视觉如有则使用，
-没有也不要停；所有数字必须可追溯，视觉设计交给 Image2。
-```
-
-## 本地辅助脚本
+需要 Python 3.10+ 和可用的 Codex。首次在仓库目录运行：
 
 ```bash
-python scripts/init_job.py /path/to/private-job --title "Company pitch"
-python scripts/validate_deck_brief.py /path/to/deck-brief.json
-python scripts/prepare_generation.py /path/to/deck-brief.json --out /path/to/prompt-pack.md
+python -m pip install -r requirements-ppt.txt
+python tools/ppt.py install
 ```
 
-公开前必须运行：
+Windows 也可双击 `install-ppt.cmd` 安装全部八个 Skills；转换依赖仍按上面的命令安装。已有同名 Skill 时不会直接覆盖，明确加 `--replace` 才先备份再更新。
+
+以后在 Codex 中直接说：
+
+```text
+使用 $ppt-studio，根据这些资料制作一份完整汇报。
+请先理解目标并选择适当的分析框架，核验事实与数字，保留分析依据，
+然后组织叙事、确定适合这个主题的设计风格，完成原生可编辑 PPT、备注和检查。
+不要固定使用 Noir，也不要为了套框架而凑页面。
+```
+
+或填写 `PPT_REQUEST.md`，把简报文件拖到 `start-ppt.cmd` 上。也可运行：
+
+```bash
+python tools/ppt.py generate --brief my-brief.md --job ../my-presentation --assets my-source-folder
+```
+
+`--assets` 可省略；默认类型与风格为 `auto`。想明确指定时可以加 `--type financial-analysis --style institutional`，也可以写自由描述。任务目录必须是仓库外的全新目录。
+
+## 不同任务的调用示例
+
+- 公司和行业：比较商业模式、竞争位置与核心经营驱动，形成有证据的结论。
+- 财务和投资：统一财年、币种、单位和口径，分析变化驱动与情景，保留原生数据图表。
+- 战略和经营：围绕具体决策比较选项、权衡、实施条件、负责人和风险。
+- 产品和学术：解释问题、机制/方法、结果、验证与局限，保留真实界面和研究数据。
+- 培训和项目：按学习目标或项目状态组织案例、流程、里程碑与行动，而非复制长段落。
+
+## 输出与能力边界
+
+默认输出 `output/deck.pptx`，文字、表格、图表和简单图形可编辑，照片保留为独立图片。按需要附演讲备注、来源、分析记录、SVG、PDF或总览图；并非所有原生图表都适合转成忠实的 SVG。
+
+这是一套驱动 Codex 工作的 Skills 与制作工具，不附带生图模型或额度。研究、生图和渲染取决于当前会话实际可用的工具；桌面和 CLI 可能不同。未返回型号时不冒称 Image2.5。最终必须区分“结构检查通过”和“逐页视觉检查通过”。
+
+无需模型的合成演示：
+
+```bash
+python tools/ppt.py demo --out ../ppt-demo
+```
+
+测试与打包：
 
 ```bash
 python -m unittest discover -s tests -v
-python scripts/public_release_check.py . --denylist /path/to/private-denylist.txt
+python scripts/public_release_check.py . --skip-history
+python tools/build_ppt_package.py --out ../PPT_Studio_Full_Skills.zip
 ```
 
-自动扫描通过不代表已经完成公司所有权、合规、品牌或第三方素材授权审查。
-
-## 同事交接包
-
-`team-kit/` 提供可直接交给另一位同事 Codex 的机器可读入口、安全安装器、请求模板和自校验工具。同事上传 ZIP 后，只需把 `CODEX_INSTALL_AND_RUN.txt` 原样发给 Codex。
-
-生成交接包：
-
-```bash
-python team-kit/build_team_package.py --out ../Image2投行PPT_Codex使用包.zip
-```
+代码沿用 MIT，转换器保留第三方 MIT 声明，字体保留 OFL。真实公司成品、私人来源、品牌宣传照片和演讲稿不在公开包中。原版 Image2 辅助工具及 Noir 入口仍可使用，完整新版请从 `$ppt-studio` 开始。

@@ -1,0 +1,50 @@
+{
+  "title": "Northstar · Operating review (synthetic example)",
+  "slide_size": [13.333, 7.5],
+  "theme": {
+    "font": "Aptos Display",
+    "body_font": "Aptos",
+    "background": "F6F7F8",
+    "text": "202932",
+    "accent": "2E617A"
+  },
+  "slides": [
+    {
+      "title": "Decision overview · illustrative scenario",
+      "notes": "All Northstar data and relationships in this demonstration are fictional, synthetic teaching examples. No company or investment recommendation is represented.",
+      "elements": [
+        {"type": "text", "x": 0.8, "y": 1.25, "w": 8.3, "h": 1.1, "text": "Choose growth with a\nmeasured operating ramp.", "font_size": 32, "bold": true, "color": "202932"},
+        {"type": "text", "x": 0.8, "y": 3.1, "w": 7.0, "h": 1.0, "text": "Illustrative management case: improve delivery reliability before scaling the third region.", "font_size": 21, "color": "394754"},
+        {"type": "shape", "shape": "rect", "x": 9.7, "y": 1.35, "w": 2.65, "h": 1.0, "fill": "DDE8EA", "line": "none"},
+        {"type": "text", "x": 9.92, "y": 1.55, "w": 2.2, "h": 0.55, "text": "STAGE THE RAMP", "font_size": 16, "bold": true, "align": "center", "valign": "middle", "color": "234D61"},
+        {"type": "text", "x": 0.8, "y": 6.15, "w": 10.5, "h": 0.35, "text": "SYNTHETIC DATA · NOT A REAL COMPANY CASE", "font_size": 10, "color": "66737E"}
+      ]
+    },
+    {
+      "title": "Illustrative performance · indexed points",
+      "notes": "Synthetic scenario values, not reported company data. Unit is an index with FY2023 = 100. The values are included only to exercise native table and chart creation.",
+      "elements": [
+        {"type": "table", "x": 0.8, "y": 1.15, "w": 5.5, "h": 2.35, "rows": [["Index points", "2023", "2024", "2025"], ["Orders", "100", "108", "119"], ["On-time delivery (%)", "87", "91", "94"], ["Contribution margin (%)", "18", "19", "21"]], "header": true, "font_size": 12, "header_fill": "2E617A"},
+        {"type": "chart", "chart": "column", "x": 6.65, "y": 1.05, "w": 5.85, "h": 4.75, "title": "Orders · synthetic index points", "categories": ["2023", "2024", "2025"], "series": [{"name": "Orders", "values": [100, 108, 119]}]},
+        {"type": "text", "x": 0.85, "y": 3.8, "w": 5.2, "h": 1.1, "text": "Interpretation\nThe illustrative trend is improving. Confirm capacity and unit economics before expanding the footprint.", "font_size": 17, "color": "394754"},
+        {"type": "text", "x": 0.85, "y": 5.7, "w": 10.5, "h": 0.4, "text": "Illustrative scenario only · 2023 = 100 index where applicable", "font_size": 11, "color": "66737E"}
+      ]
+    },
+    {
+      "title": "Scale only after the pilot clears its gates",
+      "notes": "A synthetic process illustration. The stages are proposed for this sample only; no real organization or approved plan is implied.",
+      "elements": [
+        {"type": "shape", "shape": "round_rect", "x": 0.9, "y": 2.15, "w": 2.45, "h": 1.15, "fill": "E1ECEE", "line": "82A4AD"},
+        {"type": "text", "x": 1.08, "y": 2.4, "w": 2.1, "h": 0.55, "text": "1  PILOT\nOne region", "font_size": 18, "bold": true, "color": "254C5A", "align": "center"},
+        {"type": "line", "x1": 3.48, "y1": 2.72, "x2": 4.6, "y2": 2.72, "color": "597B85", "width": 2},
+        {"type": "shape", "shape": "round_rect", "x": 4.75, "y": 2.15, "w": 2.45, "h": 1.15, "fill": "E1ECEE", "line": "82A4AD"},
+        {"type": "text", "x": 4.92, "y": 2.4, "w": 2.1, "h": 0.55, "text": "2  VALIDATE\nService & margin", "font_size": 18, "bold": true, "color": "254C5A", "align": "center"},
+        {"type": "line", "x1": 7.34, "y1": 2.72, "x2": 8.45, "y2": 2.72, "color": "597B85", "width": 2},
+        {"type": "shape", "shape": "round_rect", "x": 8.6, "y": 2.15, "w": 2.65, "h": 1.15, "fill": "D5E3E8", "line": "597B85"},
+        {"type": "text", "x": 8.78, "y": 2.4, "w": 2.3, "h": 0.55, "text": "3  EXPAND\nGate-based", "font_size": 18, "bold": true, "color": "203F4D", "align": "center"},
+        {"type": "text", "x": 1.0, "y": 4.25, "w": 10.4, "h": 0.8, "text": "Before each decision, compare realized service levels and contribution margin with the pilot's pre-agreed thresholds.", "font_size": 19, "color": "394754"},
+        {"type": "text", "x": 1.0, "y": 6.1, "w": 10.5, "h": 0.35, "text": "PROCESS ILLUSTRATION · THRESHOLDS MUST COME FROM APPROVED SOURCES", "font_size": 10, "color": "66737E"}
+      ]
+    }
+  ]
+}

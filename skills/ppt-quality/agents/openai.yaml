@@ -1,0 +1,4 @@
+interface:
+  display_name: "PPT Quality"
+  short_description: "Verify claims, native objects and rendered slide quality"
+  default_prompt: "Use $ppt-quality to complete the requested presentation work with evidence and verified artifacts."

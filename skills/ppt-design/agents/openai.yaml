@@ -1,0 +1,4 @@
+interface:
+  display_name: "PPT Design"
+  short_description: "Choose brand-aware layouts, charts and photographic styles"
+  default_prompt: "Use $ppt-design to complete the requested presentation work with evidence and verified artifacts."

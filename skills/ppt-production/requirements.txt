@@ -1,0 +1,7 @@
+# Standalone dependencies for skills/ppt-production/scripts/build_deck.py.
+# These versions match the repository's existing native PowerPoint exporter.
+python-pptx==1.0.2
+lxml==6.1.1
+Pillow==12.3.0
+XlsxWriter==3.2.9
+typing_extensions==4.16.0

@@ -1,0 +1,4 @@
+interface:
+  display_name: "PPT Research"
+  short_description: "Research presentation facts with traceable, dated sources"
+  default_prompt: "Use $ppt-research to verify the material claims for my presentation and prepare a dated source and evidence ledger with caveats."

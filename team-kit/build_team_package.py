@@ -15,15 +15,24 @@ import zipfile
 
 
 SKILL_NAME = "bp-to-image2-pitch-deck"
-KIT_NAME = "Image2投行PPT_Codex使用包"
+KIT_NAME = "PPT_Studio_全套Skills使用包"
 RUNTIME_ROOT_FILES = (
     "SKILL.md",
     "README.md",
     "README.zh-CN.md",
     "LICENSE",
     "pyproject.toml",
+    "PPT_REQUEST.md",
+    "requirements-ppt.txt",
+    "requirements-noir.txt",
+    "start-ppt.cmd",
+    "install-ppt.cmd",
+    "NOIR_STUDIO.md",
+    "NOIR_REQUEST.md",
+    "start-noir.cmd",
+    "install-noir.cmd",
 )
-RUNTIME_DIRS = ("agents", "references", "scripts", "examples", "tests")
+RUNTIME_DIRS = ("agents", "references", "scripts", "examples", "tests", "skills", "tools")
 KIT_FILES = (
     "START_HERE.md",
     "CODEX_INSTALL_AND_RUN.txt",

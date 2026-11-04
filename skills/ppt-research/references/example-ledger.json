@@ -1,0 +1,31 @@
+{
+  "sources": [
+    {
+      "id": "S01",
+      "title": "Illustrative annual-results release",
+      "publisher": "Example issuer",
+      "document_date": "2026-03-01",
+      "access_date": "2026-05-01",
+      "url_or_path": "https://example.invalid/results",
+      "locator": "Revenue table, row 1",
+      "scope": "Illustrative FY2025 revenue",
+      "status": "public_primary",
+      "use_notes": "Fictional placeholder; replace before use"
+    }
+  ],
+  "claims": [
+    {
+      "id": "E01",
+      "statement": "Example issuer reported revenue of EUR 100 million in FY2025",
+      "status": "reported_fact",
+      "source_ids": ["S01"],
+      "period": "FY2025",
+      "unit": "million",
+      "currency": "EUR",
+      "denominator": null,
+      "formula": null,
+      "confidence": "high",
+      "caveat": "Synthetic example only"
+    }
+  ]
+}

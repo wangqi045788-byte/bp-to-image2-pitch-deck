@@ -1,0 +1,4 @@
+interface:
+  display_name: "PPT Studio"
+  short_description: "Research, analyze, design and build editable presentations"
+  default_prompt: "Use $ppt-studio to complete the requested presentation work with evidence and verified artifacts."

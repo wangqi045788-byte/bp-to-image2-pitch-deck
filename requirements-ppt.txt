@@ -1,0 +1,2 @@
+# Shared conversion and optional Windows QA dependencies for the complete suite.
+-r skills/noir-ppt-studio/requirements.txt

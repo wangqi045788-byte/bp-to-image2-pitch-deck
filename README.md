@@ -1,135 +1,79 @@
-# BP to Image2 Pitch Deck
+# PPT Studio — Analysis to Editable Presentations
 
-**New: [Noir PPT Studio](NOIR_STUDIO.md)** — a photographic editorial Skill with native editable text/shapes, per-slide SVG, a bundled converter, and one-command installation/generation. [中文一键使用说明](NOIR_STUDIO.md).
+[完整中文说明](README.zh-CN.md) · [Main Skill](skills/ppt-studio/SKILL.md) · [Analytical Method](skills/ppt-analysis/SKILL.md)
+
+A complete Codex Skill suite for researching, analyzing, structuring, designing, producing and checking presentations. It supports company, industry, financial, strategic, operational, product, academic, teaching, proposal, project and policy work. Choose a suitable method and visual system for the actual question; do not force every deck into Noir or a stock pitch template.
+
+## What is preserved
+
+The reusable method is **decision question → evidence → normalized calculations → relevant analytical framework → supported conclusion and counterevidence → audience-led narrative → visual proof → native output → review**. Sources, formulas, assumptions and concise decision rationales remain auditable. Design is one part of the workflow, not a replacement for analysis.
+
+| Skill | Role |
+| --- | --- |
+| [ppt-studio](skills/ppt-studio/SKILL.md) | One entry point coordinating the full task |
+| [ppt-research](skills/ppt-research/SKILL.md) | Source discovery, factual checks and claim provenance |
+| [ppt-analysis](skills/ppt-analysis/SKILL.md) | Decision decomposition, appropriate frameworks, calculations and alternatives |
+| [ppt-storyline](skills/ppt-storyline/SKILL.md) | Evidence-led narrative, slide messages and speaker notes |
+| [ppt-design](skills/ppt-design/SKILL.md) | Audience/brand-specific layouts, typography, diagrams and imagery |
+| [ppt-production](skills/ppt-production/SKILL.md) | Native editable text, tables, charts, geometry, photos and notes |
+| [ppt-quality](skills/ppt-quality/SKILL.md) | Content, numbers, native semantics and rendered-slide review |
+| [noir-ppt-studio](skills/noir-ppt-studio/SKILL.md) | Optional monochrome photographic style and SVG reconstruction |
+
+## Install and invoke
+
+Requires Python 3.10+ and an available Codex environment. From this repository:
 
 ```bash
-python -m pip install -r requirements-noir.txt
-python tools/noir.py install
-python tools/noir.py generate --brief my-brief.md --job ../my-deck
+python -m pip install -r requirements-ppt.txt
+python tools/ppt.py install
 ```
 
-Windows: double-click `install-noir.cmd` once, then drag a brief onto `start-noir.cmd`. The installed Codex runtime performs research and creative work with the tools actually available to the account. The deterministic exporter itself does not generate images. Public assets are methods and synthetic examples, not private company decks or campaign photographs.
-
-The original visual-first workflow below is retained. The new Noir route adds native editable PPTX + SVG and respects a different user-selected reference.
-
-[中文说明](README.zh-CN.md)
-
-An installable Codex skill that turns a user prompt, company information, and mixed reference material into an evidence-controlled, high-end pitch deck designed with Image2.
-
-Inputs can be sparse. A BP and visual references are optional. The workflow selects only the pages supported by the objective and evidence, derives a company-specific brand system, creates a high-complexity production prompt for every slide, generates full-slide visuals, assembles the PPTX, and validates the exported deck.
-
-## Teammate handoff kit
-
-The `team-kit/` directory contains a machine-readable Codex entry prompt, a safe cross-platform installer, an input template, and package verification tooling. Build a self-contained ZIP with:
-
-```bash
-python team-kit/build_team_package.py --out ../Image2投行PPT_Codex使用包.zip
-```
-
-## This is the creation workflow
-
-This repository creates a **new** deck from source material. It is deliberately separate from [`editable-ppt-image2-rebuild`](https://github.com/wangqi045788-byte/editable-ppt-image2-rebuild), which reconstructs an existing slide or screenshot as editable PowerPoint objects.
-
-| Project | Starts from | Primary output | Editability |
-| --- | --- | --- | --- |
-| `bp-to-image2-pitch-deck` | Prompt, company information, reference material, optional BP, optional visual references | Newly selected narrative and Image2-designed pitch deck | Full-slide visual renders |
-| `editable-ppt-image2-rebuild` | Existing slide image, PDF page, or screenshot | High-fidelity reconstruction | Semantic editable objects |
-
-## Input contract
-
-- **Required:** user prompt and at least one usable company/reference source.
-- **Optional:** BP, draft deck, logo, brand guide, product images, screenshots, report excerpts, and visual references.
-- **Flexible:** exact slide count, range, or automatic selection.
-
-The skill does not force a standard fifteen-page template. It can produce a one-page product study, a concise management roadshow, or a full investor deck depending on the prompt and available evidence.
-
-## Workflow
-
-```mermaid
-flowchart TD
-    A[Prompt + sources] --> B[Evidence cards]
-    B --> C[Narrative and page selection]
-    A --> D[Brand and visual system]
-    C --> E[Deck brief]
-    D --> E
-    E --> F[Per-slide Image2 prompts]
-    F --> G[Full-slide visuals]
-    G --> H[PPTX and exported-deck QA]
-```
-
-Core rules:
-
-- no invented facts, metrics, customers, interfaces, or citations;
-- reported facts, calculations, user assertions, and analyst judgment stay distinct;
-- supplied logos and factual images are preserved exactly;
-- company-specific visual language replaces generic technology templates;
-- one clear reading path, controlled copyfit, and deliberate hierarchy per slide;
-- private work stays outside the repository;
-- public examples are synthetic or independently public and rights-reviewed.
-
-## Install
-
-Clone or copy the repository into your Codex skills directory, then invoke:
+Then ask Codex:
 
 ```text
-$bp-to-image2-pitch-deck
+Use $ppt-studio to turn these materials into an editable presentation.
+Determine the relevant analytical method, verify the facts, develop the argument,
+choose a suitable style, and deliver the PPTX with sources, notes and QA results.
 ```
 
-Example request:
-
-```text
-Use $bp-to-image2-pitch-deck to create an investor pitch from my prompt,
-company information, and reference files. The BP and visual references are
-optional. Select the strongest evidence-supported pages and use Image2 for the
-designed slide visuals.
-```
-
-## Deterministic helpers
-
-Initialize a private job directory outside the repository:
+Windows: double-click `install-ppt.cmd` once, then drag your brief onto `start-ppt.cmd`. The dependency installation above is an explicit first-time setup step; the launcher does not silently install packages.
 
 ```bash
-python scripts/init_job.py /path/to/private-job --title "Company pitch"
+python tools/ppt.py generate --brief my-brief.md --job ../my-deck --assets my-materials
 ```
 
-Validate a planned deck:
+`--assets` is optional. Both type and style default to `auto`; optional `--type` and `--style` accept a specific direction. A supplied reference/template takes priority. Use `PPT_REQUEST.md` as a brief template. `--dry-run` prepares inputs without calling Codex.
+
+## Real production paths
+
+- Build ordinary analytical slides with native PowerPoint text, tables and chart data using the bundled general builder.
+- Reuse an approved native template for updates and company house-style work.
+- Use ImageGen for artwork, composition studies or clean plates when available and appropriate; reconstruct meaningful text/data natively.
+- Use the bundled source-coordinate SVG adapter for photographic or screenshot reconstruction. Keep photos as independent image objects.
+- Render and inspect the actual exported deck. Structural success alone is not visual acceptance.
 
 ```bash
-python scripts/validate_deck_brief.py /path/to/deck-brief.json
+python tools/ppt.py demo --out ../ppt-demo
 ```
 
-Build the prompt pack:
+The model-free synthetic demo exercises native production; it is not proof that every possible generative presentation type has been benchmarked. The corresponding [production Skill](skills/ppt-production/SKILL.md) describes supported object types and limitations.
 
-```bash
-python scripts/prepare_generation.py /path/to/deck-brief.json \
-  --out /path/to/prompt-pack.md
-```
+## Runtime and privacy boundaries
 
-Run the public-release scanner with a private denylist stored outside the repository:
+The agent-driven creation route uses the tools and account available in the user's Codex session. CLI and desktop may expose different image or rendering capabilities. No image model, inference quota, API key or guarantee of an unseen backend model is bundled. Record the actual tool/model ID, or unknown when hidden.
 
-```bash
-python scripts/public_release_check.py . --denylist /path/to/private-denylist.txt
-```
+The launcher keeps jobs outside the repository, copies only explicitly supplied assets, preserves existing outputs and does not bypass sandbox protections. No uploading to GitHub, messaging, financial transactions or account changes are part of making a presentation.
 
-## Public demo
+The public package excludes private company decks, brand campaign photographs, source research and speaker notes. Code is MIT; bundled FigEdit/PPT Master notices and the optional font's OFL license are retained. User inputs and outputs do not inherit the code license.
 
-The included HelioGrid demo is fictional. It demonstrates slide selection, evidence typing, copyfit, brand direction, and deterministic prompt generation without using a real company or client asset.
-
-```bash
-python scripts/validate_deck_brief.py examples/public-demo/deck-brief.json
-python scripts/build_prompt_pack.py examples/public-demo/deck-brief.json \
-  --out examples/public-demo/prompt-pack.public.md
-```
-
-## Validation
+## Verification and packaging
 
 ```bash
 python -m unittest discover -s tests -v
 python scripts/public_release_check.py . --skip-history
+python tools/build_ppt_package.py --out ../PPT_Studio_Full_Skills.zip
 ```
 
-Automated checks do not replace manual privacy, ownership, brand-rights, or third-party-license review.
+Real PowerPoint integration is opt-in on an appropriate Windows machine. Always report unexecuted checks rather than marking them passed. GitHub CI checks the deterministic code paths and synthetic examples, not artistic quality or live image generation.
 
-## License
-
-MIT. Do not assume that user inputs, company assets, third-party materials, or generated outputs inherit this repository's license.
+The original evidence/prompt-generation helpers and [visual-only Image2 workflow](references/legacy-image2-workflow.md) remain available for explicitly selected flat-image decks. The old [Noir guide](NOIR_STUDIO.md) now describes an optional style route. The full-suite default is `$ppt-studio` with editable output.

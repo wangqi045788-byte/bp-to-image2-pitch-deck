@@ -20,10 +20,12 @@ jobs:
       - name: Generate prompt pack
         run: python scripts/build_prompt_pack.py examples/public-demo/deck-brief.json --out /tmp/prompt-pack.md
       - name: Install editable conversion dependencies
-        run: python -m pip install -r requirements-noir.txt
+        run: python -m pip install -r requirements-ppt.txt
       - name: Run all unit tests
         run: python -m unittest discover -s tests -v
       - name: Public release scan
         run: python scripts/public_release_check.py . --skip-history
       - name: Build editable Noir demo
         run: python tools/noir.py demo --out "${{ runner.temp }}/noir-demo"
+      - name: Build generic analytical deck
+        run: python tools/ppt.py demo --out "${{ runner.temp }}/ppt-demo"

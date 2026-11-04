@@ -1,0 +1,4 @@
+interface:
+  display_name: "PPT Production"
+  short_description: "Build editable PowerPoint slides with native charts and tables"
+  default_prompt: "Use $ppt-production to turn the approved slide plan and sources into an editable PPTX with native tables, charts, diagrams, and notes."
