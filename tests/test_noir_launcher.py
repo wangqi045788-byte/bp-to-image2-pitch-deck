@@ -61,6 +61,15 @@ class NoirLauncherTests(unittest.TestCase):
             self.assertIn("$noir-ppt-studio", request)
             self.assertFalse((job / "output" / "deck.pptx").exists())
 
+    def test_dry_run_without_codex_cli_still_prints_a_valid_placeholder(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            brief = root / "brief.md"
+            brief.write_text("An abstract demo", encoding="utf-8")
+            job = root / "job"
+            with patch.object(noir.shutil, "which", return_value=None), patch.object(noir.subprocess, "run", side_effect=AssertionError("dry-run called a subprocess")):
+                self.assertEqual(noir.generate(brief, job, dry_run=True), 0)
+
     def test_job_cannot_be_created_inside_repository_or_overwrite_existing_directory(self):
         with tempfile.TemporaryDirectory() as tmp:
             brief = Path(tmp) / "brief.md"

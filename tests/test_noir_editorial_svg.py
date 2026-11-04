@@ -318,12 +318,9 @@ class EditorialSvgExportTests(unittest.TestCase):
         self.assertEqual(sha256(self.output), output_before)
         self.assertEqual(sha256(source), before)
 
-        replaced = run_cli(
-            self.job_path,
-            "--overwrite",
-            "--figedit-dir",
-            str(Path.home() / ".codex" / "skills" / "figedit"),
-        )
+        # run_cli provides an isolated CODEX_HOME and USERPROFILE; this also
+        # proves replacement works with the bundled converter and no user Skill.
+        replaced = run_cli(self.job_path, "--overwrite")
         self.assertEqual(replaced.returncode, 0, replaced.stdout + replaced.stderr)
         self.assertEqual(sha256(source), before)
         deck = Presentation(str(self.output))

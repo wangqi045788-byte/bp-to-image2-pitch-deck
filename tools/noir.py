@@ -155,7 +155,9 @@ def generate(brief: Path, job: Path, *, assets: Path | None = None, dry_run: boo
         if dry_run:
             print("Dry run: Codex was not started.")
             print(f"Request: {job / 'request.md'}")
-            print("Command:", subprocess.list2cmdline(cmd[:-1] + ["<stdin: request.md>"]))
+            display_cmd = cmd[:-1] + ["<stdin: request.md>"]
+            display_cmd[0] = codex or "codex"
+            print("Command:", subprocess.list2cmdline(display_cmd))
             return 0
         with (job / "request.md").open("r", encoding="utf-8") as request:
             completed = subprocess.run(cmd, stdin=request, cwd=job, check=False)
